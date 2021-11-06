@@ -1,0 +1,38 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+<center><h1>숫자정렬</h1></center>
+
+<script>
+var num = prompt("여러숫자입력~");
+var c = 0
+alert("입력값은"+num);
+
+val = num.split(' ');
+
+data = val.map(Number)
+document.write("input "+data+"<br>");
+
+for(j = 0; j <(data.length); j++){
+	for (i = 0; i < (data.length-1); i++){
+		if(data[i] > data[i+1]){
+			tmp = data[i]; data[i] = data[i+1]; data[i+1] =tmp
+			
+			c +=1
+			document.write(data+" " +c+"<br>")
+	}
+
+}
+}
+
+document.write("프로세스 수행수: "+c)
+
+</script>
+
+</body>
+
+</html>
